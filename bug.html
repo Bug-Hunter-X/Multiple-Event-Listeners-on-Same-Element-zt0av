@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+  <script>
+    // Incorrect way to add event listener
+    document.getElementById('myDiv').onclick = function() {
+      alert('Clicked!');
+    };
+
+    document.getElementById('myDiv').addEventListener('click', function() {
+      alert('Clicked!');
+    });
+  </script>
+</body>
+</html>
